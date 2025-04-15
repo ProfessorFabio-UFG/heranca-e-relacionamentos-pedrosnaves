@@ -23,9 +23,7 @@ public class PessoaFisica extends Pessoas {
     }
 
     public String toString() {
-        return "\nNome: " + getNome() +
-                "\nEndereço: " + getEndereco() +
-                "\nTelefone: " + getTelefone() +
+        return super.toString() +
                 "\nCPF: " + this.cpf +
                 "\nSexo: " + this.sexo +
                 "\nEstado Civil: " + this.estadoCivil;
