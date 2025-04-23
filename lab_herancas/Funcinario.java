@@ -3,15 +3,16 @@ public class Funcionario extends PessoaFisica{
     private double salario;
     private String cargo;
 
-    public Funcionario(String nome, String endereco, String telefone, String cpf, char sexo, int estadoCivil, int matricula, double salario, String cargo) {
-        super(nome, endereco, telefone, cpf, sexo, estadoCivil);
+    public Funcionario(PessoaFisica pf,int matricula, double salario, String cargo) {
+        super(pf, pf.getCpf(), pf.getSexo(), pf.getEstadoCivil());
         this.matricula = matricula;
         this.salario = salario;
         this.cargo = cargo;
     }
 
     public String toString() {
-        return super.toString() +
+        return "\nFuncionario: \n" +
+                super.toString() +
                 "\nMatricula: " + this.matricula +
                 "\nSalario: " + this.salario +
                 "\nCargo: " + this.cargo;
