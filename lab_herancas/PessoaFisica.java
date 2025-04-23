@@ -3,8 +3,8 @@ public class PessoaFisica extends Pessoas {
     private char sexo;
     private int estadoCivil;
 
-    public PessoaFisica(String nome, String endereco, String telefone, String cpf, char sexo, int estadoCivil) {
-        super(nome, endereco, telefone);
+    public PessoaFisica(Pessoas p, String cpf, char sexo, int estadoCivil) {
+        super(p.getNome(), p.getEndereco(), p.getTelefone());
         this.cpf = cpf;
         this.sexo = sexo;
         this.estadoCivil = estadoCivil;
