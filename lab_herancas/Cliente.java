@@ -3,15 +3,16 @@ public class Cliente extends PessoaFisica{
     private String interesses;
     private String profissao;
 
-    public Cliente(String nome, String endereco, String telefone, String cpf, char sexo, int estadoCivil, double renda, String interesses, String profissao) {
-        super(nome, endereco, telefone, cpf, sexo, estadoCivil);
+    public Cliente(PessoaFisica pf, double renda, String interesses, String profissao) {
+        super(pf, pf.getCpf(), pf.getSexo(), pf.getEstadoCivil());
         this.renda = renda;
         this.interesses = interesses;
         this.profissao = profissao;
     }
 
     public String toString() {
-        return super.toString() +
+        return "\nCliente: \n" +
+                super.toString() +
                 "\nRenda: " + this.renda +
                 "\nInteresses: " + this.interesses +
                 "\nProfissão: " + this.profissao;
