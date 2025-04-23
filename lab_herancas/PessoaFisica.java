@@ -1,31 +1,25 @@
-public class PessoaFisica extends Pessoas {
-    private String cpf;
-    private char sexo;
-    private int estadoCivil;
+public class PessoaJuridica extends Pessoas{
+    private String cnpj;
+    private String razaoSocial;
 
-    public PessoaFisica(Pessoas p, String cpf, char sexo, int estadoCivil) {
+    public PessoaJuridica(Pessoas p, String cnpj, String razaoSocial) {
         super(p.getNome(), p.getEndereco(), p.getTelefone());
-        this.cpf = cpf;
-        this.sexo = sexo;
-        this.estadoCivil = estadoCivil;
+        this.cnpj = cnpj;
+        this.razaoSocial = razaoSocial;
     }
 
-    public String getCpf() {
-        return this.cpf;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public char getSexo() {
-        return this.sexo;
-    }
-
-    public int getEstadoCivil() {
-        return this.estadoCivil;
+    public String getRazaoSocial() {
+        return razaoSocial;
     }
 
     public String toString() {
         return super.toString() +
-                "\nCPF: " + this.cpf +
-                "\nSexo: " + this.sexo +
-                "\nEstado Civil: " + this.estadoCivil;
+                "\nCNPJ: " + this.cnpj +
+                "\nRazão Social: " + this.razaoSocial;
     }
+
 }
